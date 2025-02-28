@@ -23,19 +23,19 @@ const Projects = () => {
     ];
 
     return (
-        <div className="p-6 bg-gray-100 min-h-screen">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">Projects</h1>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="p-8 bg-gradient-to-b from-gray-100 to-gray-200 min-h-screen">
+            <h1 className="text-4xl font-extrabold text-gray-900 mb-8 text-center tracking-wide">Projects</h1>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projectList.map((project, index) => (
                     <div 
                         key={index} 
-                        className="bg-white rounded-lg p-6 border transition-shadow shadow-[rgba(0,0,0,0.15)_-5px_-5px_10px_0px] hover:shadow-[rgba(0,0,0,0.3)_-7px_-7px_15px_0px]"
+                        className="bg-white rounded-2xl p-6 border border-gray-300 transition-all shadow-lg hover:shadow-xl hover:-translate-y-2"
                     >
-                        <h2 className="text-2xl font-semibold text-gray-800">{project.title}</h2>
-                        <p className="text-gray-600 mt-2">{project.description}</p>
+                        <h2 className="text-2xl font-semibold text-gray-900 mb-2">{project.title}</h2>
+                        <p className="text-gray-700 mb-4">{project.description}</p>
                         <div className="flex flex-wrap mt-3 gap-2">
                             {project.tags.map((tag, idx) => (
-                                <span key={idx} className="px-3 py-1 text-sm bg-gray-200 text-gray-700 rounded-full">
+                                <span key={idx} className="px-3 py-1 text-sm bg-blue-100 text-blue-800 rounded-full font-medium">
                                     {tag}
                                 </span>
                             ))}
